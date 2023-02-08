@@ -10,9 +10,9 @@
     --hue-color: 142; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
     /* HSL color mode */
-    --first-color: hsl(var(--hue-color), 69%, 58%);
-    --blob-color: hsl(var(--hue-color), 68%, 74%);
-    --first-color-second: hsl(var(--hue-color), 69%, 61%);
+    --first-color: #1b75fd;
+    --blob-color: #ef1313;
+    --first-color-second: #1b75fd;
     --first-color-alt: hsl(var(--hue-color), 57%, 45%);
     --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
     --title-color: hsl(var(--hue-color), 8%, 15%);
@@ -417,34 +417,14 @@ img{
     margin-bottom: var(--mb-2-5);
 }
 
-.about__info{
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: var(--mb-2-5);
-}
-
-.about__info-title{
-    font-size: var(--h2-font-size);
-    font-weight: var(--font-semi-bold);
-    color: var(--title-color);
-}
-
-.about__info-name{
-    font-size: var(--smaller-font-size);
-}
-
-.about__info-title,
-.about__info-name{
-    display: block;
-    text-align: center;
-}
-
 .about__buttons{
     display: flex;
     justify-content: center;
 }
 
 /*==================== SKILLS ====================*/
+
+
 .skills__container{
     row-gap: 3.5rem;
 }
@@ -911,7 +891,6 @@ img{
         justify-self: center;
     }
 
-    .about__container,
     .skills__container,
     .portfolio__content,
     .project__container,
@@ -1004,7 +983,7 @@ img{
             justify-content: space-between;
         }
         .about__buttons {
-            justify-content: initial;
+            justify-content: center;
         }
         .qualification__tabs {
             justify-content: center;
