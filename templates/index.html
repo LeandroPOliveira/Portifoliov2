@@ -579,35 +579,44 @@
                     </div>
                 </div>
 
-                <form action="" class="contact__form grid">
+                <form action="/send" method="post" class="contact__form grid">
                     <div class="contact__inputs grid">
                         <div class="contact__content">
                             <label for="" class="contact__label">Nome</label>
-                            <input type="text" class="contact__input">
+                            <input type="text" class="contact__input" name="nome" required>
                         </div>
-                        <div class="contact__content">
-                            <label for="" class="contact__label">Email</label>
-                            <input type="email" class="contact__input">
-                        </div>
+
                     </div>
                     <div class="contact__content">
-                        <label for="" class="contact__label">Projeto</label>
-                        <input type="text" class="contact__input">
+                        <label for="" class="contact__label">Email</label>
+                        <input type="email" class="contact__input" name="email" required>
                     </div>
                     <div class="contact__content">
                         <label for="" class="contact__label">Mensagem</label>
-                        <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                        <textarea name="mensagem" id="" cols="0" rows="7" class="contact__input" required></textarea>
                     </div>
 
                     <div>
-                        <a href="#" class="button button--flex">
+                        <button type="submit" class="button button--flex" >
                             Enviar mensagem
                             <i class="uil uil-message button__icon"></i>
-                        </a>
+                        </button>
+
                     </div>
                 </form>
             </div>
         </section>
+
+
+         {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul id="messages" class="list-unstyled">
+                {% for message in messages %}
+                    <li class="alert alert-success">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
     </main>
 
     <!--==================== FOOTER ====================-->
