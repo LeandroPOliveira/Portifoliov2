@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template, redirect, request, flash
 from flask_mail import Mail, Message
-from config import email, senha
+# from config import email, senha
 
 app = Flask(__name__)
 app.secret_key = 'lambreta'
