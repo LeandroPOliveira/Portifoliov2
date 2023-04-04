@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper-bundle.min.css') }}">
 
     <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
 
     <title>Leandro</title>
 </head>
@@ -597,26 +599,31 @@
                     </div>
 
                     <div>
-                        <button type="submit" class="button button--flex" >
+                        <button id="btn-enviar" type="submit" class="button button--flex" >
                             Enviar mensagem
                             <i class="uil uil-message button__icon"></i>
                         </button>
-
+                        <button id="btn-enviar-loader" class="btn btn-primary" type="button" disabled>
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        Loading...
+                        </button>
                     </div>
                 </form>
             </div>
         </section>
 
-
-         {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                <ul id="messages" class="list-unstyled">
-                {% for message in messages %}
-                    <li class="alert alert-success">{{ message }}</li>
-                {% endfor %}
-                </ul>
-            {% endif %}
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div id="alerta" class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="bi bi-check-circle-fill"></i> {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            </button>
+        </div>
+        {% endfor %}
+        {% endif %}
         {% endwith %}
+
     </main>
 
     <!--==================== FOOTER ====================-->
