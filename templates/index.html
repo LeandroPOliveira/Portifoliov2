@@ -603,9 +603,9 @@
                             Enviar mensagem
                             <i class="uil uil-message button__icon"></i>
                         </button>
-                        <button id="btn-enviar-loader" class="btn btn-primary" type="button" disabled>
+                        <button id="btn-enviar-loader" class="button button--flex" type="button" disabled>
                         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                        Loading...
+                        Enviando ...
                         </button>
                     </div>
                 </form>
@@ -617,7 +617,7 @@
         {% for message in messages %}
         <div id="alerta" class="alert alert-success alert-dismissible fade show" role="alert">
             <i class="bi bi-check-circle-fill"></i> {{ message }}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
             </button>
         </div>
         {% endfor %}
