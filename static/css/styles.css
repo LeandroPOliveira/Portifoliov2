@@ -226,6 +226,7 @@ img{
 .nav__list{
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    text-align: center;
 }
 
 .nav__link{
@@ -239,6 +240,17 @@ img{
 
 .nav__link:hover{
     color:var(--first-color);
+}
+
+.language{
+    background: var(--first-color);
+    color: #ffffff;
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.5rem;
+}
+
+.nav__item{
+    margin: auto;
 }
 
 .nav__icon{

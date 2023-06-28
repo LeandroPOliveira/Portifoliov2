@@ -25,9 +25,16 @@ class Contato:
         self.email = email
         self.mensagem = mensagem
 
+
 @app.route('/')
 def index():
     return render_template('index.html')
+
+
+@app.route('/en')
+def en():
+    return render_template('english.html')
+
 
 @app.route('/send', methods=['GET', 'POST'])
 def send():
@@ -54,6 +61,7 @@ def send():
         flash('Mensagem enviada com sucesso!')
 
     return redirect('/')
+
 
 if __name__ == '__main__':
     app.run(debug=False)
